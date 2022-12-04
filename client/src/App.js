@@ -5,7 +5,7 @@ import {ChatProvider} from './context/ChatContext'
 
 function App() {
   return <ChatProvider>
-    <Container/>
+    <Container/> 
   </ChatProvider>
 }
 
