@@ -15,4 +15,14 @@ export const  init = ()=>{
 
 export const sendMessage=(message)=>{
     if(socket) socket.emit('new-message',message);
+
+}
+
+export const subsChat=(cb)=>{
+    if(!socket) return;
+
+    socket.on("receive-message",(message)=>{
+        console.log("yeni mesaj var",message)
+        cb(message)
+    })
 }
